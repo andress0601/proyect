@@ -1,0 +1,22 @@
+<div class="col-md-4" *ngFor="let game of games">
+    <div class="card text-center">
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        {{cliente.identificador}}
+        <button class="btn btn-danger" (click)="deleteGame(game.id)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+      <div class="card-body">
+        <p>{{cliente.razon}}</p>
+        <p>{{cliente.personaContacto}}</p>
+        <p>{{cliente.direccion}}</p>
+        <p>{{cliente.telefono}}</p>
+        <p>{{cliente.departamento}}</p>
+        <p>{{cliente.ciudad}}</p>
+        <p>{{cliente.cupoOtorgado}}</p>
+        <a [routerLink]="['/clientes/edit', cliente.identificacion]" class="btn btn-info btn-block">
+          EDITAR CLIENTE
+        </a>
+      </div>
+    </div>
+  </div>

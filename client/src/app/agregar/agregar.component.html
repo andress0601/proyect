@@ -1,0 +1,45 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <input type="number" name="id" [(ngModel)]="cliente.identificacion" placeholder="Identificacion" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="razon" [(ngModel)]="cliente.razon" placeholder="Razón" class="form-control"></input>
+          </div>
+          <div class="form-group">
+            <input type="text" name="personaContacto" [(ngModel)]="cliente.personaContacto" placeholder="Persona de contacto" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="direccion" [(ngModel)]="cliente.direccion" placeholder="Dirección" class="form-control" >
+          </div>
+          <div class="form-group">
+            <input type="text" name="telefono" [(ngModel)]="cliente.telefono" placeholder="Telefono" class="form-control" >
+          </div>
+          <div class="form-group">
+            <input type="text" name="departamento" [(ngModel)]="cliente.departamento" placeholder="Departamento" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="ciudad" [(ngModel)]="cliente.ciudad" placeholder="Ciudad" class="form-control" >
+          </div>
+          <div class="form-group">
+            <input type="number" name="cupoOtorgado" [(ngModel)]="cliente.cupoOtorgado" placeholder="Cupo Otorgado" class="form-control" autofocus>
+          </div>
+
+          <button class="btn btn-success btn-block" (click)="edit ? updateCliente() : saveNewCliente()">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card card-body text-center">
+    <img [src]="game.image == '' ? '/assets/noimage.png' : game.image" alt="No Image" class="card-img-top">
+      <h3>{{game.id}}. {{game.title == '' ? 'Game Title' : game.title}}</h3>
+      <p>{{game.description == '' ? 'Write your Descrition' : game.description}}</p>
+      <p>{{game.created_at | date: 'yyyy-MM-dd'}}</p>
+    </div>
+  </div>
